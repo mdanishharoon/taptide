@@ -71,7 +71,7 @@ export default function TextOverlay({
     };
 
     // Get style based on variant overlay style
-    const getMotionStyles = (): Record<string, MotionValue<number | string>> => {
+    const getMotionStyles = (): Record<string, any> => {
         switch (variant.overlayStyle) {
             case "slide":
                 return { opacity, x: slideX };
@@ -116,10 +116,6 @@ export default function TextOverlay({
                 style={{
                     fontFamily: variant.headingFont,
                     color: variant.textColor,
-                    textShadow:
-                        variant.overlayStyle === "glow"
-                            ? `0 0 40px ${variant.accentColor}50`
-                            : "none",
                 }}
             >
                 {variant.overlayStyle === "typewriter" ? (
