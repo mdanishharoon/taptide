@@ -262,7 +262,11 @@ export default function BeerScroll({ variantId }: BeerScrollProps) {
         <div
             ref={containerRef}
             className="relative w-full"
-            style={{ height: "600vh", backgroundColor: variant.backgroundColor }}
+            style={{
+                height: "600vh",
+                backgroundColor: variant.backgroundColor,
+                scrollSnapType: "y mandatory"
+            }}
         >
             {/* Loading Screen - Fixed Overlay */}
             {!imagesLoaded && (
@@ -331,6 +335,24 @@ export default function BeerScroll({ variantId }: BeerScrollProps) {
                     </div>
                 </div>
             )}
+
+            {/* Scroll Snap Sections - Invisible sections to snap to */}
+            {textContent.map((content, index) => {
+                const sectionHeight = (content.endProgress - content.startProgress) * 600; // Convert to vh units
+                const sectionTop = content.startProgress * 600; // Convert to vh units
+                return (
+                    <div
+                        key={`snap-${index}`}
+                        className="absolute w-full pointer-events-none"
+                        style={{
+                            height: `${sectionHeight}vh`,
+                            top: `${sectionTop}vh`,
+                            scrollSnapAlign: "start",
+                            scrollSnapStop: "always"
+                        }}
+                    />
+                );
+            })}
 
             {/* Sticky Canvas Container */}
             <div className="sticky top-0 h-screen w-full overflow-hidden z-0">

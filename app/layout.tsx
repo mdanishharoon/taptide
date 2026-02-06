@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import { Schibsted_Grotesk, Cormorant_Garamond } from "next/font/google";
+import SmoothScroll from "@/components/SmoothScroll";
 import "./globals.css";
 
 const schibsted = Schibsted_Grotesk({
@@ -35,7 +36,7 @@ export default function RootLayout({
       <body
         className={`${schibsted.variable} ${cormorant.variable} antialiased`}
       >
-        {children}
+        <SmoothScroll>{children}</SmoothScroll>
       </body>
     </html>
   );
