@@ -1,0 +1,64 @@
+@import "tailwindcss";
+
+/* Taptide Color Palette */
+:root {
+  --deep-navy: #0B1E2D;
+  --golden-bronze: #AC8A4D;
+  --antique-cream: #F4F1E1;
+  --ocean-teal: #204A5E;
+  --background: #0B1E2D;
+  --foreground: #F4F1E1;
+}
+
+@theme inline {
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --color-deep-navy: var(--deep-navy);
+  --color-golden-bronze: var(--golden-bronze);
+  --color-antique-cream: var(--antique-cream);
+  --color-ocean-teal: var(--ocean-teal);
+  --font-display: var(--font-schibsted);
+  --font-body: var(--font-cormorant);
+}
+
+/* Ensure scrollbar doesn't affect layout */
+html {
+  overflow-x: hidden;
+  scrollbar-gutter: stable;
+}
+
+body {
+  background: var(--deep-navy);
+  color: var(--antique-cream);
+  font-family: var(--font-body), Georgia, serif;
+  overflow-x: hidden;
+}
+
+/* Custom scrollbar styling */
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: var(--deep-navy);
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--golden-bronze);
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: var(--antique-cream);
+}
+
+/* Selection styling */
+::selection {
+  background: var(--golden-bronze);
+  color: var(--deep-navy);
+}
+
+/* Smooth scrolling */
+html {
+  scroll-behavior: smooth;
+}
