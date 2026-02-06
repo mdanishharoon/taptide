@@ -23,7 +23,6 @@
 
 /* Ensure scrollbar doesn't affect layout */
 html {
-  overflow-x: hidden;
   scrollbar-gutter: stable;
 }
 
@@ -31,7 +30,6 @@ body {
   background: var(--deep-navy);
   color: var(--antique-cream);
   font-family: var(--font-body), Georgia, serif;
-  overflow-x: hidden;
 }
 
 /* Custom scrollbar styling */
