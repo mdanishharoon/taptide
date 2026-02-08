@@ -1,16 +1,19 @@
+import localFont from "next/font/local";
 import type { Metadata } from "next";
-import { Schibsted_Grotesk, Cormorant_Garamond } from "next/font/google";
+import { Cormorant_Garamond } from "next/font/google";
 import SmoothScroll from "@/components/SmoothScroll";
 import "./globals.css";
 
-const schibsted = Schibsted_Grotesk({
-  variable: "--font-schibsted",
-  subsets: ["latin"],
-  weight: ["400", "500", "600", "700", "800", "900"],
+// Custom display font
+const houseOfCards = localFont({
+  src: "../public/fonts/house-of-cards-bold.ttf",
+  variable: "--font-display",
+  display: "swap",
 });
 
+// Body font
 const cormorant = Cormorant_Garamond({
-  variable: "--font-cormorant",
+  variable: "--font-body",
   subsets: ["latin"],
   weight: ["300", "400", "500", "600", "700"],
 });
@@ -18,7 +21,7 @@ const cormorant = Cormorant_Garamond({
 export const metadata: Metadata = {
   title: "Taptide | Crafted by the Coast",
   description: "Experience the perfect pour at Taptide Pub. Cold, crisp, and captured in amber.",
-  keywords: ["pub", "beer", "coastal", "craft beer", "restaurant", "bar"],
+  keywords: ["pub", "beer", "coastal", "craft beer", "restaurant", "bar", "sports bar", "manchester"],
   openGraph: {
     title: "Taptide | Crafted by the Coast",
     description: "Experience the perfect pour at Taptide Pub.",
@@ -34,7 +37,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body
-        className={`${schibsted.variable} ${cormorant.variable} antialiased`}
+        className={`${houseOfCards.variable} ${cormorant.variable} antialiased`}
       >
         <SmoothScroll>{children}</SmoothScroll>
       </body>
