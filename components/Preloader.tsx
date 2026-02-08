@@ -1,7 +1,18 @@
 "use client";
 
 import { motion } from "framer-motion";
-import type { StyleVariant } from "./BeerScroll";
+
+interface StyleVariant {
+    id: number;
+    name: string;
+    headingFont: string;
+    bodyFont: string;
+    accentColor: string;
+    backgroundColor: string;
+    textColor: string;
+    ctaStyle: "solid" | "outline";
+    overlayStyle: "fade" | "slide" | "blur";
+}
 
 interface PreloaderProps {
     progress: number;
