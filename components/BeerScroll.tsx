@@ -278,8 +278,8 @@ export default function BeerScroll() {
                 />
             </div>
 
-            {/* Text Overlays - Fixed Layer */}
-            <div className="fixed top-0 left-0 w-full h-full pointer-events-none z-10">
+            {/* Text Overlays - Sticky Layer (stops at section end) */}
+            <div className="sticky top-0 h-screen w-full pointer-events-none z-10" style={{ marginTop: "-100vh" }}>
                 {textContent.map((content, index) => (
                     <TextOverlay
                         key={index}
