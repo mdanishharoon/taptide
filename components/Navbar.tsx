@@ -5,11 +5,11 @@ import { motion, AnimatePresence, useScroll, useMotionValueEvent } from "framer-
 import Link from "next/link";
 
 const navLinks = [
-    { href: "#home", label: "Home" },
-    { href: "#sports", label: "Sports" },
-    { href: "#whats-on", label: "What's On" },
-    { href: "#menu", label: "Menu" },
-    { href: "#contact", label: "Contact" },
+    { href: "/", label: "Home" },
+    { href: "/sports", label: "Sports" },
+    { href: "/whats-on", label: "What's On" },
+    { href: "/menu", label: "Menu" },
+    { href: "/contact", label: "Contact" },
 ];
 
 export default function Navbar() {
@@ -53,7 +53,7 @@ export default function Navbar() {
                     }}
                 >
                     {/* Logo */}
-                    <Link href="#home" className="group">
+                    <Link href="/" className="group">
                         <motion.span
                             className="text-2xl md:text-3xl tracking-[0.15em]"
                             style={{
