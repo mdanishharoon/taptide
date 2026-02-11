@@ -196,6 +196,7 @@ export default function WhatsOnPage() {
                     </div>
                 </section>
             </main>
+            <Footer />
         </>
     );
 }

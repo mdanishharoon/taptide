@@ -226,6 +226,7 @@ export default function SportsPage() {
                     </div>
                 </section>
             </main>
+            <Footer />
         </>
     );
 }

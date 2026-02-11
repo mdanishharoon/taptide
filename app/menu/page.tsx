@@ -250,6 +250,7 @@ export default function MenuPage() {
                     </p>
                 </section>
             </main>
+            <Footer />
         </>
     );
 }

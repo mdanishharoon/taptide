@@ -451,6 +451,7 @@ export default function ContactPage() {
                     </p>
                 </section>
             </main>
+            <Footer />
         </>
     );
 }
