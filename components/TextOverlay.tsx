@@ -154,7 +154,7 @@ export default function TextOverlay({
                     }}
                     whileTap={{ scale: 0.98 }}
                 >
-                    Book a Table
+                    See Pubs
                 </motion.button>
             )}
         </motion.div>

@@ -7,21 +7,21 @@ import Footer from "@/components/Footer";
 const upcomingEvents = [
     {
         title: "Quiz Night",
-        date: "Every Wednesday",
+        date: "Every Thursday",
         time: "8:00 PM",
         description: "Test your knowledge and win prizes!",
-    },
-    {
-        title: "Live Music Friday",
-        date: "Every Friday",
-        time: "9:00 PM",
-        description: "Local bands and acoustic sessions",
     },
     {
         title: "Sunday Roast",
         date: "Every Sunday",
         time: "12:00 PM - 5:00 PM",
         description: "Traditional roasts with all the trimmings",
+    },
+    {
+        title: "Live DJ",
+        date: "Friday & Saturday",
+        time: "9:00 PM",
+        description: "Dance the night away with our resident DJs",
     },
 ];
 
@@ -46,7 +46,7 @@ export default function WhatsOnPage() {
                             animate={{ opacity: 1, y: 0 }}
                             transition={{ duration: 0.6 }}
                         >
-                            WHAT'S ON
+                            WHAT&apos;S ON
                         </motion.h1>
                         <motion.p
                             className="text-xl md:text-2xl opacity-70"

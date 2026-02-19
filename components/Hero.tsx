@@ -172,22 +172,7 @@ export default function Hero() {
                     animate={{ opacity: 0.7, y: 0 }}
                     transition={{ delay: 1.5, duration: 0.8 }}
                 >
-                    Crafted by the Coast
-                </motion.p>
-
-                {/* Subtle Subtitle */}
-                <motion.p
-                    className="mt-6 text-base md:text-lg tracking-[0.2em] max-w-md text-center"
-                    style={{
-                        fontFamily: "var(--font-body)",
-                        color: "var(--antique-cream)",
-                        opacity: 0.5,
-                    }}
-                    initial={{ opacity: 0 }}
-                    animate={{ opacity: 0.5 }}
-                    transition={{ delay: 2, duration: 0.8 }}
-                >
-                    Manchester's finest coastal pub experience
+                    Crafted to Perfection
                 </motion.p>
             </motion.div>
 

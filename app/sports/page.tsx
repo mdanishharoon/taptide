@@ -1,6 +1,7 @@
 "use client";
 
 import { motion } from "framer-motion";
+import Script from "next/script";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 
@@ -97,7 +98,7 @@ export default function SportsPage() {
                                     color: "var(--deep-navy)",
                                 }}
                             >
-                                THIS WEEK'S FIXTURES
+                                THIS WEEK&apos;S FIXTURES
                             </h2>
                             <p
                                 className="text-lg opacity-70"
@@ -210,7 +211,7 @@ export default function SportsPage() {
                                     color: "var(--deep-navy)",
                                 }}
                             >
-                                Don't miss a moment of the action!
+                                Don&apos;t miss a moment of the action!
                             </p>
                             <button
                                 className="px-8 py-4 text-sm uppercase tracking-[0.2em] transition-all hover:opacity-90"
@@ -222,6 +223,52 @@ export default function SportsPage() {
                             >
                                 Book a Table
                             </button>
+                        </motion.div>
+                    </div>
+                </section>
+
+                {/* FANZO Widget Section */}
+                <section className="py-16 px-6" style={{ backgroundColor: "#fff" }}>
+                    <div className="max-w-4xl mx-auto">
+                        <motion.div
+                            className="text-center mb-12"
+                            initial={{ opacity: 0, y: 20 }}
+                            whileInView={{ opacity: 1, y: 0 }}
+                            viewport={{ once: true }}
+                        >
+                            <h2
+                                className="text-3xl md:text-4xl mb-4"
+                                style={{
+                                    fontFamily: "var(--font-display)",
+                                    color: "var(--deep-navy)",
+                                }}
+                            >
+                                LIVE FIXTURES
+                            </h2>
+                        </motion.div>
+
+                        {/* FANZO Widget */}
+                        <motion.div
+                            className="flex justify-center"
+                            initial={{ opacity: 0 }}
+                            whileInView={{ opacity: 1 }}
+                            viewport={{ once: true }}
+                        >
+                            <div id="FANZO-widget-container" style={{ maxWidth: '100%', margin: '0 auto' }} />
+                            <Script
+                                src="https://widget.fanzo.com/widget.js"
+                                strategy="lazyOnload"
+                                onLoad={() => {
+                                    if (typeof window !== 'undefined') {
+                                        const win = window as Window & { FANZOWidget?: (config: { container: string }) => void };
+                                        if (win.FANZOWidget) {
+                                            win.FANZOWidget({
+                                                container: 'FANZO-widget-container'
+                                            });
+                                        }
+                                    }
+                                }}
+                            />
                         </motion.div>
                     </div>
                 </section>
