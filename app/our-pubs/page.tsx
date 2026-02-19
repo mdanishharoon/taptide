@@ -267,7 +267,7 @@ export default function OurPubsPage() {
                                     color: "var(--antique-cream)",
                                 }}
                             >
-                                We're expanding across the UK. Stay tuned for updates.
+                                We&apos;re expanding across the UK. Stay tuned for updates.
                             </p>
                         </motion.div>
                     </div>

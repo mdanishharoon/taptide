@@ -97,7 +97,7 @@ export default function SportsPage() {
                                     color: "var(--deep-navy)",
                                 }}
                             >
-                                THIS WEEK'S FIXTURES
+                                THIS WEEK&apos;S FIXTURES
                             </h2>
                             <p
                                 className="text-lg opacity-70"
@@ -210,7 +210,7 @@ export default function SportsPage() {
                                     color: "var(--deep-navy)",
                                 }}
                             >
-                                Don't miss a moment of the action!
+                                Don&apos;t miss a moment of the action!
                             </p>
                             <button
                                 className="px-8 py-4 text-sm uppercase tracking-[0.2em] transition-all hover:opacity-90"

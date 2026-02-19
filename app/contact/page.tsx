@@ -82,7 +82,7 @@ export default function ContactPage() {
                             animate={{ opacity: 0.7 }}
                             transition={{ delay: 0.3 }}
                         >
-                            We'd love to hear from you
+                            We&apos;d love to hear from you
                         </motion.p>
                         <motion.div
                             className="mt-6 h-[2px] w-24 mx-auto"
@@ -234,7 +234,7 @@ export default function ContactPage() {
                                                 color: "var(--deep-navy)",
                                             }}
                                         >
-                                            We'll get back to you soon.
+                                            We&apos;ll get back to you soon.
                                         </p>
                                     </motion.div>
                                 ) : (

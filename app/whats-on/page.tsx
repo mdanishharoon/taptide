@@ -46,7 +46,7 @@ export default function WhatsOnPage() {
                             animate={{ opacity: 1, y: 0 }}
                             transition={{ duration: 0.6 }}
                         >
-                            WHAT'S ON
+                            WHAT&apos;S ON
                         </motion.h1>
                         <motion.p
                             className="text-xl md:text-2xl opacity-70"
