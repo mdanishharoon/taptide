@@ -1,6 +1,7 @@
 "use client";
 
 import { motion } from "framer-motion";
+import Script from "next/script";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 
@@ -253,15 +254,16 @@ export default function SportsPage() {
                             whileInView={{ opacity: 1 }}
                             viewport={{ once: true }}
                         >
-                            <div
-                                dangerouslySetInnerHTML={{
-                                    __html: `<div id="FANZO-widget-container" style="max-width: 100%; margin: 0 auto;"></div>
-<script src="https://widget.fanzo.com/widget.js"></script>
-<script>
-  FANZOWidget({
-    container: 'FANZO-widget-container'
-  });
-</script>`,
+                            <div id="FANZO-widget-container" style={{ maxWidth: '100%', margin: '0 auto' }} />
+                            <Script
+                                src="https://widget.fanzo.com/widget.js"
+                                strategy="lazyOnload"
+                                onLoad={() => {
+                                    if (typeof window !== 'undefined' && (window as Window & { FANZOWidget?: (config: { container: string }) => void }).FANZOWidget) {
+                                        (window as Window & { FANZOWidget: (config: { container: string }) => void }).FANZOWidget({
+                                            container: 'FANZO-widget-container'
+                                        });
+                                    }
                                 }}
                             />
                         </motion.div>
