@@ -225,6 +225,48 @@ export default function SportsPage() {
                         </motion.div>
                     </div>
                 </section>
+
+                {/* FANZO Widget Section */}
+                <section className="py-16 px-6" style={{ backgroundColor: "#fff" }}>
+                    <div className="max-w-4xl mx-auto">
+                        <motion.div
+                            className="text-center mb-12"
+                            initial={{ opacity: 0, y: 20 }}
+                            whileInView={{ opacity: 1, y: 0 }}
+                            viewport={{ once: true }}
+                        >
+                            <h2
+                                className="text-3xl md:text-4xl mb-4"
+                                style={{
+                                    fontFamily: "var(--font-display)",
+                                    color: "var(--deep-navy)",
+                                }}
+                            >
+                                LIVE FIXTURES
+                            </h2>
+                        </motion.div>
+
+                        {/* FANZO Widget */}
+                        <motion.div
+                            className="flex justify-center"
+                            initial={{ opacity: 0 }}
+                            whileInView={{ opacity: 1 }}
+                            viewport={{ once: true }}
+                        >
+                            <div
+                                dangerouslySetInnerHTML={{
+                                    __html: `<div id="FANZO-widget-container" style="max-width: 100%; margin: 0 auto;"></div>
+<script src="https://widget.fanzo.com/widget.js"></script>
+<script>
+  FANZOWidget({
+    container: 'FANZO-widget-container'
+  });
+</script>`,
+                                }}
+                            />
+                        </motion.div>
+                    </div>
+                </section>
             </main>
             <Footer />
         </>

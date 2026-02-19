@@ -131,30 +131,9 @@ export default function ContactPage() {
                                             color: "var(--deep-navy)",
                                         }}
                                     >
-                                        123 Coastal Road<br />
-                                        Manchester, M1 2AB<br />
-                                        United Kingdom
-                                    </p>
-                                </div>
-
-                                <div>
-                                    <h3
-                                        className="text-lg mb-2"
-                                        style={{
-                                            fontFamily: "var(--font-display)",
-                                            color: "var(--golden-bronze)",
-                                        }}
-                                    >
-                                        Phone
-                                    </h3>
-                                    <p
-                                        className="text-base"
-                                        style={{
-                                            fontFamily: "var(--font-body)",
-                                            color: "var(--deep-navy)",
-                                        }}
-                                    >
-                                        0161 123 4567
+                                        14-16 Station Lane<br />
+                                        Hornchurch, Greater London<br />
+                                        RM12 6NJ
                                     </p>
                                 </div>
 
@@ -175,7 +154,7 @@ export default function ContactPage() {
                                             color: "var(--deep-navy)",
                                         }}
                                     >
-                                        hello@taptide.pub
+                                        admin@taptide.co.uk
                                     </p>
                                 </div>
 

@@ -76,25 +76,16 @@ export default function Footer() {
                                 Address
                             </h3>
                             <p
-                                className="text-base leading-relaxed mb-2"
+                                className="text-base leading-relaxed"
                                 style={{
                                     fontFamily: "var(--font-body)",
                                     color: "var(--deep-navy)",
                                 }}
                             >
-                                76 High Street,<br />
-                                Stevenage, SG1 3DW
+                                14-16 Station Lane,<br />
+                                Hornchurch, Greater London,<br />
+                                RM12 6NJ
                             </p>
-                            <a
-                                href="tel:01438357739"
-                                className="text-base transition-colors hover:opacity-70"
-                                style={{
-                                    fontFamily: "var(--font-body)",
-                                    color: "var(--deep-navy)",
-                                }}
-                            >
-                                01438 357739
-                            </a>
                         </motion.div>
 
                         {/* Book a Table */}
