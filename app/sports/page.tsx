@@ -259,10 +259,13 @@ export default function SportsPage() {
                                 src="https://widget.fanzo.com/widget.js"
                                 strategy="lazyOnload"
                                 onLoad={() => {
-                                    if (typeof window !== 'undefined' && (window as Window & { FANZOWidget?: (config: { container: string }) => void }).FANZOWidget) {
-                                        (window as Window & { FANZOWidget: (config: { container: string }) => void }).FANZOWidget({
-                                            container: 'FANZO-widget-container'
-                                        });
+                                    if (typeof window !== 'undefined') {
+                                        const win = window as Window & { FANZOWidget?: (config: { container: string }) => void };
+                                        if (win.FANZOWidget) {
+                                            win.FANZOWidget({
+                                                container: 'FANZO-widget-container'
+                                            });
+                                        }
                                     }
                                 }}
                             />
