@@ -1,6 +1,7 @@
 "use client";
 
 import { useRef } from "react";
+import Image from "next/image";
 import { motion, useScroll, useTransform } from "framer-motion";
 
 export default function Hero() {
@@ -52,8 +53,6 @@ export default function Hero() {
             },
         },
     };
-
-    const title = "TAPTIDE";
 
     return (
         <section
@@ -126,38 +125,30 @@ export default function Hero() {
                 className="relative z-10 h-full flex flex-col items-center justify-center px-6"
                 style={{ y, opacity, scale }}
             >
-                {/* Main Title */}
+                {/* Main Logo Image */}
                 <motion.div
-                    className="perspective-1000"
-                    variants={containerVariants}
-                    initial="hidden"
-                    animate="visible"
+                    initial={{ opacity: 0, y: 40, scale: 0.95 }}
+                    animate={{ opacity: 1, y: 0, scale: 1 }}
+                    transition={{ duration: 1, delay: 0.3, ease: [0.25, 0.46, 0.45, 0.94] }}
                 >
-                    <div className="flex overflow-hidden">
-                        {title.split("").map((letter, index) => (
-                            <motion.span
-                                key={index}
-                                variants={letterVariants}
-                                className="text-7xl sm:text-8xl md:text-9xl lg:text-[12rem] tracking-[0.1em] inline-block"
-                                style={{
-                                    fontFamily: "var(--font-display)",
-                                    color: "var(--antique-cream)",
-                                    textShadow: "0 0 80px rgba(172, 138, 77, 0.3)",
-                                }}
-                            >
-                                {letter}
-                            </motion.span>
-                        ))}
-                    </div>
+                    <Image
+                        src="/taptidde.png"
+                        alt="Taptide"
+                        width={490}
+                        height={140}
+                        className="w-[224px] sm:w-[336px] md:w-[420px] lg:w-[490px] h-auto object-contain"
+                        style={{ filter: "drop-shadow(0 0 60px rgba(172, 138, 77, 0.35))" }}
+                        priority
+                    />
                 </motion.div>
 
                 {/* Animated Line */}
                 <motion.div
                     className="h-[2px] w-48 md:w-64 my-8 origin-center"
                     style={{ backgroundColor: "var(--golden-bronze)" }}
-                    variants={lineVariants}
-                    initial="hidden"
-                    animate="visible"
+                    initial={{ scaleX: 0, opacity: 0 }}
+                    animate={{ scaleX: 1, opacity: 1 }}
+                    transition={{ duration: 1.2, delay: 1, ease: [0.25, 0.46, 0.45, 0.94] }}
                 />
 
                 {/* Tagline */}
@@ -174,6 +165,7 @@ export default function Hero() {
                 >
                     Crafted to Perfection
                 </motion.p>
+
             </motion.div>
 
             {/* Corner Accents */}

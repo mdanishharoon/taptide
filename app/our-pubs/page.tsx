@@ -223,7 +223,18 @@ export default function OurPubsPage() {
                                         </div>
 
                                         {/* Visit Button */}
-                                        <div className="mt-8">
+                                        <div className="mt-8 flex flex-wrap gap-4">
+                                            <Link
+                                                href="/sutton-arms"
+                                                className="inline-block px-8 py-4 text-sm uppercase tracking-[0.2em] transition-all hover:opacity-90"
+                                                style={{
+                                                    fontFamily: "var(--font-body)",
+                                                    backgroundColor: "var(--deep-navy)",
+                                                    color: "var(--antique-cream)",
+                                                }}
+                                            >
+                                                Visit Sutton Arms →
+                                            </Link>
                                             <Link
                                                 href="/contact"
                                                 className="inline-block px-8 py-4 text-sm uppercase tracking-[0.2em] transition-all hover:opacity-90"
